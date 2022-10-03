@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xlmns:th="http://www.thymeleaf.org"
+      xmlns:xlmns="http://www.w3.org/1999/xhtml" lang="en, ru" >
+<head>
+    <meta charset="UTF-8">
+    <title>Virtual book library</title>
+    <link rel="stylesheet" th:href="@{/css/index-style.css}">
+</head>
+<body>
+<h1 class="welcome-text">Welcome to "Virtual book library"!</h1>
+<a th:href="@{/login}">Login</a>
+</body>
+<footer>
+    <div th:fragment="footer" class="footer">
+        <div>
+            <div class="left-col">
+                <div class="left-col-links">
+                    <p>
+                        <a th:href="@{/}">Home</a>
+                        <a th:href="@{/about}">About</a>
+                        <a th:href="@{/}">Contact us</a>
+                    </p>
+                </div>
+            </div>
+            <div class="right-col" >
+                <div class="right-col-links">
+                    <span>Follow us on <a th:href="@{https://github.com/EVLitvin}">GitHub</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &#169 2022</p>
+        </div>
+    </div>
+</footer>
+</html>
