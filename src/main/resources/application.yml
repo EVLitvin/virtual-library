@@ -1,1 +1,28 @@
+logging:
+  file:
+    name: main.log
+  level:
+    sql: debug
+    web: debug
 
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: true
+  datasource:
+    url: jdbc:h2:file:./data/virtlibdb
+    username: user
+    password: password
+    driverClassName: org.h2.Driver
+    generate-unique-name: false
+    name: virtlibdb
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: true
+    open-in-view: off
