@@ -1,1 +1,0 @@
-INSERT INTO BOOK (ID, AUTHOR, TITLE) VALUES ( '1', 'Leo Tolstoy', 'War and Peace' );
