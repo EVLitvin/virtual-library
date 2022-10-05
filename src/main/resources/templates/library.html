@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<h1>Library</h1>
+<h1>Library</h1><br/>
 
 <table>
     <thead>
@@ -24,15 +24,19 @@
         <td th:text="${book.author}"></td>
     </tr>
     </tbody>
-</table>
+</table><br/>
 
 <form th:method="POST" th:object="${book}" th:action="@{/library}">
     <div>
-        <label>Title</label>
-        <input type="text" th:field="*{title}" th:value="${book.title}">
+        <p><label>Title</label>
+        <input type="text" th:field="*{title}" th:value="${book.title}"/>
+        <span class="validation-error" th:if="${#fields.hasErrors('title')}"
+              th:errors="*{title}">Title error</span></p>
 
-        <label>Author</label>
-        <input type="text" th:field="*{author}" th:value="${book.author}">
+        <p><label>Author</label>
+        <input type="text" th:field="*{author}" th:value="${book.author}"/>
+        <span class="validation-error" th:if="${#fields.hasErrors('author')}"
+              th:errors="*{author}">Author error</span></p>
 
         <button type="submit">Donate</button>
     </div>
