@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, .content {
+    margin: 40px;
+}
+
+.content {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.content .login-form .login-labels {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 270px;
+}
+
+.content .login-button {
+    padding-top: 5px;
+}

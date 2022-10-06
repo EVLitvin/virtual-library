@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, .content, .register-button {
+    margin: 10px;
+}
+
+.content {
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 270px;
+}

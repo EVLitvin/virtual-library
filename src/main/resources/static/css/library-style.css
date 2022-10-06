@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, p, .content, .book-donation, button, table {
+    margin: 10px;
+}
+
+table {
+    width: 500px;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 3px;
+    border: 1px solid black;
+}
+
+th {
+    background: #b0e0e6;
+}
+
+.content .book-id {
+    text-align: center;
+}
+
+.content .book-donation {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 500px;
+}
+
+.content .book-donation .validation-error {
+    color: red;
+}

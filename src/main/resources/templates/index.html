@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html xlmns:th="http://www.thymeleaf.org"
-      xmlns:xlmns="http://www.w3.org/1999/xhtml" lang="en, ru" >
+      xmlns:xlmns="http://www.w3.org/1999/xhtml" lang="en, ru">
 <head>
     <meta charset="UTF-8">
     <title>Virtual book library</title>
     <link rel="stylesheet" th:href="@{/css/index-style.css}">
+    <link rel="stylesheet" th:href="@{/css/footer-style.css}">
 </head>
 <body>
-<h1 class="welcome-text">Welcome to "Virtual book library"!</h1>
-<a th:href="@{/login}">Login</a>
+<div>
+    <h1 class="welcome-text">Welcome to "Virtual book library" !</h1>
+    <h3 class="login-text">Click <a th:href="@{/login}">here</a> to login and enter the library.</h3>
+</div>
 </body>
 <footer>
     <div th:fragment="footer" class="footer">
-        <div>
+        <div class="footer-container">
             <div class="left-col">
                 <div class="left-col-links">
                     <p>
-                        <a th:href="@{/}">Home</a>
+                        <a th:href="@{/}" class="link-home">Home</a>
                         <a th:href="@{/about}">About</a>
                         <a th:href="@{/}">Contact us</a>
                     </p>
                 </div>
             </div>
-            <div class="right-col" >
+            <div class="right-col">
                 <div class="right-col-links">
-                    <span>Follow us on <a th:href="@{https://github.com/EVLitvin}">GitHub</a></span>
+                    <span>Follow this project on <a th:href="@{https://github.com/EVLitvin}">GitHub</a></span>
                 </div>
             </div>
         </div>

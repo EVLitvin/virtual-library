@@ -1,0 +1,59 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #292c2f;
+    color: whitesmoke;
+}
+
+.footer .footer-container {
+    display: grid;
+    grid-template-columns: auto 350px;
+}
+
+.footer .footer-container .left-col {
+    display: grid;
+    padding: 10px 20px;
+}
+
+.footer .footer-container .left-col .left-col-links a,
+.footer .footer-container .left-col .left-col-links a:visited {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer .footer-container .left-col .left-col-links a:hover {
+    text-decoration: underline;
+}
+
+.footer .footer-container .left-col .left-col-links a:before {
+    content: " · ";
+    left: 0;
+    padding-right: 5px;
+    display: inline-block;
+}
+
+.footer .footer-container .left-col .left-col-links .link-home:before {
+    content: none;
+}
+
+.footer .footer-container .right-col {;
+    display: grid;
+    padding-top: 25px;
+}
+
+.footer .footer-container .right-col .right-col-links a,
+.footer .footer-container .right-col .right-col-links a:visited {
+    color: royalblue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.copyright {
+    text-align: center;
+    padding-bottom: 5px;
+    font-family: "Ubuntu Thin", cursive;
+    font-weight: bold;
+
+}
