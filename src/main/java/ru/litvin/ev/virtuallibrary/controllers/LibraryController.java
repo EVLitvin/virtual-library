@@ -11,6 +11,8 @@ import ru.litvin.ev.virtuallibrary.Book;
 import ru.litvin.ev.virtuallibrary.data.BookRepository;
 
 import javax.validation.Valid;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @Controller
 @RequestMapping("/library")
@@ -25,6 +27,13 @@ public class LibraryController {
     @ModelAttribute(name = "book")
     public Book book() {
         return new Book();
+    }
+
+    @ModelAttribute(name = "date")
+    public String date() {
+        String pattern = "MMM dd, yyyy";
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+        return simpleDateFormat.format(new Date());
     }
 
     @GetMapping

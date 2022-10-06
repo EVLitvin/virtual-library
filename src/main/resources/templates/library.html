@@ -9,6 +9,8 @@
 <body>
 <h1>Library</h1><br/>
 
+<p>Books available in the library for today - <span th:text="${date}">Today</span></p>
+
 <table>
     <thead>
     <tr>
@@ -26,6 +28,7 @@
     </tbody>
 </table><br/>
 
+<p>Maybe you want to donate any book for our library?</p>
 <form th:method="POST" th:object="${book}" th:action="@{/library}">
     <div>
         <p><label>Title</label>
@@ -38,7 +41,7 @@
         <span class="validation-error" th:if="${#fields.hasErrors('author')}"
               th:errors="*{author}">Author error</span></p>
 
-        <button type="submit">Donate</button>
+        <button type="submit">Donate book!</button>
     </div>
 </form>
 
