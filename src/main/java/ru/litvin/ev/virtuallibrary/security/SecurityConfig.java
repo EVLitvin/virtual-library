@@ -28,6 +28,11 @@ public class SecurityConfig {
                 .defaultSuccessUrl("/library")
 
                 .and()
+                .logout()
+                .logoutUrl("/logout")
+                .logoutSuccessUrl("/")
+
+                .and()
                 .csrf()
                 .ignoringAntMatchers("/h2-console/**")
 

@@ -6,11 +6,20 @@
     <link rel="stylesheet" th:href="@{css/footer-style.css}"/>
     <link rel="stylesheet" th:href="@{css/library-style.css}"/>
 </head>
-
+<header class="header">
+    <div class="header-content">
+        <h3>Welcome
+            <span th:text="${libraryUser.lastName + ' ' + libraryUser.firstName + ', '}">User lastname and firstname.</span>
+            <a class="logout-link" href="javascript: document.logoutForm.submit()">logout</a>
+            <form name="logoutForm" method="POST" th:action="@{/logout}" th:hidden="true">
+                <input hidden type="submit" value="Logout"/>
+            </form>
+        </h3>
+    </div>
+</header>
 <body>
 <div class="content">
     <h1>Library</h1>
-
     <p>Books available in the library for today - <span th:text="${date}">Today</span></p>
     <table>
         <thead>
@@ -29,7 +38,6 @@
         </tbody>
     </table>
     <br/>
-
     <p>Maybe you want to donate any book for our library?</p>
     <form th:method="POST" th:object="${book}" th:action="@{/library}">
         <div class="book-donation">
@@ -37,15 +45,12 @@
             <input type="text" th:field="*{title}" th:value="${book.title}"/>
             <span class="validation-error" th:if="${#fields.hasErrors('title')}"
                   th:errors="*{title}">Title error</span>
-
             <label>Author:</label>
             <input type="text" th:field="*{author}" th:value="${book.author}"/>
             <span class="validation-error" th:if="${#fields.hasErrors('author')}"
                   th:errors="*{author}">Author error</span>
         </div>
-
         <button type="submit">Donate book!</button>
-
     </form>
 </div>
 </body>
