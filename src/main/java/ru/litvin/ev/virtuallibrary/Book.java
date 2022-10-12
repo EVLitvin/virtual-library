@@ -21,13 +21,11 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    @NotBlank
-    @Size(min = 2, max = 30, message = "The book title cannot be less than" +
-                                        " 2 characters and more than 30 characters")
+    @Size(min = 2, max = 30, message = "The book title cannot be less than 2 characters and more than 30 characters")
+    @NotBlank(message = "Title can't be empty")
     private String title;
 
-    @NotBlank
-    @Size(min = 5, max = 30, message = "The author's name cannot be less than"
-                                        + " 3 characters and more than 30 characters")
+    @Size(min = 5, max = 30, message = "The author's name cannot be less than 5 characters and more than 30 characters")
+    @NotBlank(message = "Author can't be empty")
     private String author;
 }
