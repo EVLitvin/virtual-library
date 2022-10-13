@@ -16,19 +16,12 @@
 <footer>
     <div th:fragment="footer" class="footer">
         <div class="footer-container">
-            <div class="left-col">
-                <div class="left-col-links">
-                    <p>
-                        <a th:href="@{/}" class="link-home">Home</a>
-                        <a th:href="@{/about}">About</a>
-                        <a th:href="@{/}">Contact us</a>
-                    </p>
-                </div>
-            </div>
-            <div class="right-col">
-                <div class="right-col-links">
-                    <span>Follow this project on <a th:href="@{https://github.com/EVLitvin}">GitHub</a></span>
-                </div>
+            <div class="links">
+                <p>
+                    <a th:href="@{/}" class="home-link">Home</a>
+                    <a th:href="@{/about}">About</a>
+                    · Follow us on <a class="github-link" th:href="@{https://github.com/EVLitvin}"><span class="github-color">GitHub</span></a>
+                </p>
             </div>
         </div>
         <div class="copyright">

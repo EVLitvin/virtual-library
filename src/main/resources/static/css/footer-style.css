@@ -8,51 +8,52 @@
 
 .footer .footer-container {
     display: grid;
-    grid-template-columns: auto 350px;
+    grid-template-columns: auto;
 }
 
-.footer .footer-container .left-col {
-    display: grid;
-    padding: 10px 20px;
+.footer .footer-container {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 18px;
 }
 
-.footer .footer-container .left-col .left-col-links a,
-.footer .footer-container .left-col .left-col-links a:visited {
+.footer .footer-container .links a,
+.footer .footer-container .links a:visited {
     color: whitesmoke;
     text-decoration: none;
     font-weight: bold;
 }
 
-.footer .footer-container .left-col .left-col-links a:hover {
+.footer .footer-container .links a:hover {
     text-decoration: underline;
 }
 
-.footer .footer-container .left-col .left-col-links a:before {
+.footer .footer-container .links a:before {
     content: " · ";
-    left: 0;
     padding-right: 5px;
     display: inline-block;
 }
 
-.footer .footer-container .left-col .left-col-links .link-home:before {
+.footer .footer-container .links .home-link:before {
     content: none;
 }
 
-.footer .footer-container .right-col {;
-    display: grid;
-    padding-top: 25px;
+.footer .footer-container .links .github-link:hover {
+    text-decoration: none;
 }
 
-.footer .footer-container .right-col .right-col-links a,
-.footer .footer-container .right-col .right-col-links a:visited {
+.footer .footer-container .links .github-link:before {
+    content: none;
+}
+
+.footer .footer-container .links .github-color {
     color: royalblue;
-    text-decoration: none;
-    font-weight: bold;
 }
 
 .copyright {
-    text-align: center;
+    text-align: right;
     padding-bottom: 5px;
+    padding-right: 20px;
     font-family: "Ubuntu Thin", cursive;
     font-weight: bold;
 
