@@ -9,7 +9,9 @@
 <header class="header">
     <div class="header-content">
         <h3>Welcome
-            <span class="user-name" th:text="${libraryUser.lastName + ' ' + libraryUser.firstName + ' | '}">User lastname and firstname.</span>
+            <a class="user-name" th:href="@{/user-profile}">
+                <span th:text="${libraryUser.lastName + ' ' + libraryUser.firstName}">User lastname/firstname.</span></a>
+            <span> | </span>
             <a class="logout-link" href="javascript: document.logoutForm.submit()">logout</a>
             <form name="logoutForm" method="POST" th:action="@{/logout}" th:hidden="true">
                 <input hidden type="submit" value="Logout"/>

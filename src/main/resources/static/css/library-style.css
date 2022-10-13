@@ -13,9 +13,10 @@ h1, .content, .book-donation, button, table {
     padding: 45px;
 }
 
-/*.header .header-content {*/
-
-/*}*/
+.header .header-content .user-name {
+    text-decoration: none;
+    color: #2d65ff;
+}
 
 /*.header .header-content .user-name {*/
 
