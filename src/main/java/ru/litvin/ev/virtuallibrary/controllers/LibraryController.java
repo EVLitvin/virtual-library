@@ -35,7 +35,7 @@ public class LibraryController {
     @ModelAttribute(name = "libraryUser")
     public LibraryUser libraryUser(Principal principal) {
         String username = principal.getName();
-        return libraryUserRepo.findByUsername(username);
+        return libraryUserRepo.findByUserNickname(username);
     }
 
     @ModelAttribute(name = "date")

@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 import ru.litvin.ev.virtuallibrary.LibraryUser;
 
 public interface LibraryUserRepository extends CrudRepository<LibraryUser, Long> {
-    LibraryUser findByUsername(String username);
+    LibraryUser findByUserNickname(String userNickname);
 
 }

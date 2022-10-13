@@ -7,7 +7,7 @@ import ru.litvin.ev.virtuallibrary.LibraryUser;
 @Data
 public class RegistrationForm {
 
-    private final String username;
+    private final String userNickname;
     private final String password;
     private final String firstName;
     private final String lastName;
@@ -15,7 +15,7 @@ public class RegistrationForm {
     private final String phoneNumber;
 
     public LibraryUser toUser(PasswordEncoder passwordEncoder) {
-        return new LibraryUser(username, passwordEncoder.encode(password), firstName, lastName, email, phoneNumber);
+        return new LibraryUser(userNickname, passwordEncoder.encode(password), firstName, lastName, email, phoneNumber);
     }
 
 }

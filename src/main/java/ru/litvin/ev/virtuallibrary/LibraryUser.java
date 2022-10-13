@@ -27,7 +27,7 @@ public class LibraryUser implements UserDetails {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    private final String username;
+    private final String userNickname;
     private final String password;
     private final String firstName;
     private final String lastName;
@@ -37,6 +37,11 @@ public class LibraryUser implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Arrays.asList(new SimpleGrantedAuthority("ROLE_USER"));
+    }
+
+    @Override
+    public String getUsername() {
+        return userNickname;
     }
 
     @Override

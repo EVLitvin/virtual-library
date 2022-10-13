@@ -20,14 +20,14 @@ public class LibraryUserDetailsService
     }
 
     @Override
-    public UserDetails loadUserByUsername(String username)
+    public UserDetails loadUserByUsername(String userNickname)
             throws UsernameNotFoundException {
-        LibraryUser user = userRepo.findByUsername(username);
+        LibraryUser user = userRepo.findByUserNickname(userNickname);
         if (user != null) {
             return user;
         }
         throw new UsernameNotFoundException(
-                "User '" + username + "' not found");
+                "User '" + userNickname + "' not found");
     }
 
 }
