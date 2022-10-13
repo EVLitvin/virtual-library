@@ -3,8 +3,27 @@
     padding: 0;
 }
 
-h1, p, .content, .book-donation, button, table {
+h1, .content, .book-donation, button, table {
     margin: 10px;
+}
+
+.header {
+    background: url("../images/library-header.jpg") no-repeat center;
+    text-align: right;
+    padding: 45px;
+}
+
+/*.header .header-content {*/
+
+/*}*/
+
+/*.header .header-content .user-name {*/
+
+/*}*/
+
+.header .header-content .logout-link {
+    text-decoration: none;
+    color: red;
 }
 
 table {
@@ -19,6 +38,10 @@ td, th {
 
 th {
     background: #b0e0e6;
+}
+
+.content .paragraph {
+    margin: 10px;
 }
 
 .content .book-id {

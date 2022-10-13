@@ -9,7 +9,7 @@
 <header class="header">
     <div class="header-content">
         <h3>Welcome
-            <span th:text="${libraryUser.lastName + ' ' + libraryUser.firstName + ', '}">User lastname and firstname.</span>
+            <span class="user-name" th:text="${libraryUser.lastName + ' ' + libraryUser.firstName + ' | '}">User lastname and firstname.</span>
             <a class="logout-link" href="javascript: document.logoutForm.submit()">logout</a>
             <form name="logoutForm" method="POST" th:action="@{/logout}" th:hidden="true">
                 <input hidden type="submit" value="Logout"/>
@@ -20,7 +20,7 @@
 <body>
 <div class="content">
     <h1>Library</h1>
-    <p>Books available in the library for today - <span th:text="${date}">Today</span></p>
+    <p class="paragraph">Books available in the library for today - <span th:text="${date}">Today</span></p>
     <table>
         <thead>
         <tr>
@@ -38,7 +38,7 @@
         </tbody>
     </table>
     <br/>
-    <p>Maybe you want to donate any book for our library?</p>
+    <p class="paragraph">Maybe you want to donate any book for our library?</p>
     <form th:method="POST" th:object="${book}" th:action="@{/library}">
         <div class="book-donation">
             <label>Title:</label>
