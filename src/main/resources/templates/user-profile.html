@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xlmns:th="http://www.thymeleaf.org"
+      xmlns:xlmns="http://www.w3.org/1999/xhtml" lang="en, ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Virtual book library</title>
+    <link rel="stylesheet" th:href="@{/css/user-profile-style.css}">
+    <link rel="stylesheet" th:href="@{/css/footer-style.css}">
+</head>
+<body>
+<div class="profile">
+    <div>
+        <label>Nickname:</label>
+        <span th:text="${libraryUser.userNickname}">User nickname</span>
+    </div>
+    <div>
+        <label>Firstname:</label>
+        <span th:text="${libraryUser.firstName}">Firstname</span>
+    </div>
+    <div>
+        <label>Lastname:</label>
+        <span th:text="${libraryUser.lastName}">Lastname</span>
+    </div>
+    <div>
+        <label>Email:</label>
+        <span th:text="${libraryUser.email}">Email</span>
+    </div>
+    <div>
+        <label>Phone:</label>
+        <span th:text="${libraryUser.phoneNumber}">Phone</span>
+    </div>
+</div>
+</body>
+<footer>
+    <div th:insert="~{index::footer}">Footer here</div>
+</footer>
+</html>

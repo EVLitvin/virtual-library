@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.profile {
+    padding: 10px;
+    display: grid;
+    grid-gap: 3px;
+}
